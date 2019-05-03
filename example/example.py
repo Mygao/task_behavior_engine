@@ -78,17 +78,17 @@ class Count(Node):
 
 if __name__ == '__main__':
 
-    print "Running example 1 -- using a node"
+    print("Running example 1 -- using a node")
 
     count = Count(name="count_index")
     result = NodeStatus(NodeStatus.ACTIVE)
 
     while result == NodeStatus.ACTIVE:
         result = count.tick()
-        print result
+        print(result)
         time.sleep(0.1)
 
-    print "Running example 2 (10 times) -- using a decorator"
+    print("Running example 2 (10 times) -- using a decorator")
 
     count = Count(name="count_index")
     repeat = Repeat(name="repeat_count", child=count)
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         print result
         time.sleep(0.1)
 
-    print "Running example 3 -- using a behavior"
+    print("Running example 3 -- using a behavior")
 
     b = Blackboard()
 
@@ -121,5 +121,5 @@ if __name__ == '__main__':
 
     while result == NodeStatus.ACTIVE:
         result = finish_counts.tick()
-        print result
+        print(result)
         time.sleep(0.1)
